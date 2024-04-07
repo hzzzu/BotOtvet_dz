@@ -24,20 +24,20 @@ while counter < 100:
             if 'text' in message:
                 text = message['text']
                 requests.get(f'{API_URL}{BOT_TOKEN}/sendMessage?chat_id={chat_id}&text={TEXT_RESPONSE.format("текст")}')
-            elif 'photo' in message:
-                requests.get(f'{API_URL}{BOT_TOKEN}/sendMessage?chat_id={chat_id}&text={TEXT_RESPONSE.format("фото")}')
             elif 'sticker' in message:
                 requests.get(f'{API_URL}{BOT_TOKEN}/sendMessage?chat_id={chat_id}&text={TEXT_RESPONSE.format("стикер")}')
+            elif 'photo' in message:
+                requests.get(f'{API_URL}{BOT_TOKEN}/sendMessage?chat_id={chat_id}&text={TEXT_RESPONSE.format("фото")}')
             elif 'voice' in message:
                 requests.get(f'{API_URL}{BOT_TOKEN}/sendMessage?chat_id={chat_id}&text={TEXT_RESPONSE.format("голосовое сообщение")}')
             elif 'video' in message:
                 requests.get(f'{API_URL}{BOT_TOKEN}/sendMessage?chat_id={chat_id}&text={TEXT_RESPONSE.format("видео")}')
-            elif 'animation' in message:
-                requests.get(f'{API_URL}{BOT_TOKEN}/sendMessage?chat_id={chat_id}&text={TEXT_RESPONSE.format("гифку")}')
-            elif 'video_note' in message:
-                requests.get(f'{API_URL}{BOT_TOKEN}/sendMessage?chat_id={chat_id}&text={TEXT_RESPONSE.format("видео сообщение")}')
             elif 'document' in message:
                 requests.get(f'{API_URL}{BOT_TOKEN}/sendMessage?chat_id={chat_id}&text={TEXT_RESPONSE.format("документ")}')
+            elif 'video_note' in message:
+                requests.get(f'{API_URL}{BOT_TOKEN}/sendMessage?chat_id={chat_id}&text={TEXT_RESPONSE.format("видео сообщение")}')
+            elif 'animation' in message:
+                requests.get(f'{API_URL}{BOT_TOKEN}/sendMessage?chat_id={chat_id}&text={TEXT_RESPONSE.format("гифку")}')
 
     time.sleep(1)
     counter += 1
